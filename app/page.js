@@ -13,6 +13,7 @@ export default function Home() {
         height="400"
         width="600"
       ></iframe>
+      <audio src="output.wav" controls={true}></audio>
     </div>
   );
 }

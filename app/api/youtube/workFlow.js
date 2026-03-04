@@ -1,3 +1,4 @@
+import { generateAudio } from "@/lib/generateAudio";
 import { generateVideoBasicData } from "@/lib/generateBasicVideoData";
 
 let workFlowRunning = false;
@@ -21,13 +22,23 @@ export const runWorkFlow = async (initialStage) => {
 
             console.log(`Stage : ${stage}`)
 
+            // STAGE 1
+
             if(stage === "basicVideoDataGeneration"){
-
                 const basicData = await generateVideoBasicData();
-                console.log("basicData Genereated SuceesFully 🎉",basicData)
-
-                return;
+                console.log("basicData Genereated SuceesFully 🎉",basicData.title)
+                stage = "audiogeneration"
+                continue;
             }
+
+            // STAGE 2
+
+            if(stage === "audiogeneration"){
+                const audioGeneration = await generateAudio();
+                console.log("Audio Generated SuceesFully 🎉",audioGeneration)
+                return
+            }
+
 
         }
         
