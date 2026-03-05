@@ -1,8 +1,5 @@
 
 export default function Home() {
-
-  
-
   return (
     <div className="flex flex-col min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
       <h1>Eternal Impact</h1>
@@ -13,7 +10,8 @@ export default function Home() {
         height="400"
         width="600"
       ></iframe>
-      <audio src="output.wav" controls={true}></audio>
+      <audio src="out.wav" controls={true}></audio>
+      <audio src="typecast.wav" controls={true}></audio>
     </div>
   );
 }
