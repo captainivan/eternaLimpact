@@ -10,8 +10,6 @@ export default function Home() {
         height="400"
         width="600"
       ></iframe>
-      <audio src="out.wav" controls={true}></audio>
-      <audio src="typecast.wav" controls={true}></audio>
     </div>
   );
 }
