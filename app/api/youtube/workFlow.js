@@ -49,7 +49,7 @@ export const runWorkFlow = async (initialStage) => {
                 console.log(`Stage : ${stage}`);
                 const audioGeneration = await generateAudio();
                 if (audioGeneration.success == true) {
-                    const message = await sendMessage(`Audio Genereated SuceesFully using key ${audioGeneration.key}/5`);
+                    const message = await sendMessage(`Audio Genereated SuceesFully using key ${audioGeneration.key}/${audioGeneration.totalKeys}`);
                     console.log("Audio Genereated SuceesFully 🎉", audioGeneration.url)
                     stage = "subtitlesGeneration"
                     continue;
