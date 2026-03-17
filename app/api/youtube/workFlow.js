@@ -38,7 +38,8 @@ export const runWorkFlow = async (initialStage) => {
                     continue;
                 } else {
                     const message = await sendMessage("Basic Data Generation Failed Not Posting Video today");
-                    return { message: "Basic Data Generation Failed Not Posting Video today" }
+                    console.log({ message: "Basic Data Generation Failed Not Posting Video today" });
+                    return;
                 }
             }
 
@@ -55,7 +56,8 @@ export const runWorkFlow = async (initialStage) => {
                     continue;
                 } else {
                     const message = await sendMessage("Audio Generation Failed Not Posting Video today");
-                    return { message: "Audio Generation Failed Not Posting Video today" }
+                    console.log({ message: "Audio Generation Failed Not Posting Video today" });
+                    return;
                 }
             }
 
@@ -71,8 +73,9 @@ export const runWorkFlow = async (initialStage) => {
                     stage = "imageWallGeneration"
                     continue;
                 } else {
-                    const message = await sendMessage("Audio Generation Failed Not Posting Video today");
-                    return { message: "Audio Generation Failed Not Posting Video today" }
+                    const message = await sendMessage("subtitles Generation Failed Not Posting Video today");
+                    console.log({ message: "subtitles Generation Failed Not Posting Video today" });
+                    return;
                 }
             }
 
@@ -89,7 +92,8 @@ export const runWorkFlow = async (initialStage) => {
                     continue;
                 } else {
                     const message = await sendMessage("Image Wall Generation Failed Not Posting Video today");
-                    return { message: "Image Wall Generation Failed Not Posting Video today" }
+                    console.log({ message: "Image Wall Generation Failed Not Posting Video today" });
+                    return
                 }
             }
 
@@ -106,7 +110,8 @@ export const runWorkFlow = async (initialStage) => {
                     continue;
                 } else {
                     const message = await sendMessage("Image Prompt  Generation Failed Not Posting Video today");
-                    return { message: "Image Prompt  Generation Failed Not Posting Video today" }
+                    console.log({ message: "Image Prompt  Generation Failed Not Posting Video today" });
+                    return;
                 }
             }
 
@@ -123,7 +128,8 @@ export const runWorkFlow = async (initialStage) => {
                     continue;
                 } else {
                     const message = await sendMessage("Image Generation Failed Not Posting Video today");
-                    return { message: "Image Generation Failed Not Posting Video today" }
+                    console.log({ message: "Image Generation Failed Not Posting Video today" });
+                    return;
                 }
             }
 
@@ -139,7 +145,8 @@ export const runWorkFlow = async (initialStage) => {
                     return;
                 } else {
                     const message = await sendMessage("Github Trigger Failed Not Posting Video today");
-                    return { message: "Github Trigger Failed Not Posting Video today" }
+                    console.log({ message: "Github Trigger Failed Not Posting Video today" });
+                    return;
                 }
             }
         }
