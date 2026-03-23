@@ -122,11 +122,10 @@ export const runWorkFlow = async (initialStage) => {
                 console.log(`Stage : ${stage}`);
                 const imageGeneration = await generateImage();
                 if (imageGeneration.success == true) {
-                    // const message = await sendMessage("Image Genereated SuceesFully");
-                    // console.log("Image  Genereated SuceesFully 🎉", imageGeneration.url)
-                    // stage = "githubUpload"
-                    // continue;
-                    return;
+                    const message = await sendMessage(`Image Genereated SuceesFully by using key ${imageGeneration.lastSuccessfulKey}/${imageGeneration.totalKeys}`);
+                    console.log("Image  Genereated SuceesFully 🎉", imageGeneration.url)
+                    stage = "githubUpload"
+                    continue;
                 } else {
                     const message = await sendMessage("Image Generation Failed Not Posting Video today");
                     console.log({ message: "Image Generation Failed Not Posting Video today" });
