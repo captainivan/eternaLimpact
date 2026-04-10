@@ -15,6 +15,7 @@ export async function POST() {
         process.env.PICSART_API_KEY_10,
         process.env.PICSART_API_KEY_11
     ]
+    let credits = 0;
     for (let i = 0; i < KEYS.length; i++) {
         try {
             const api = await fetch("https://genai-api.picsart.io/v1/balance", {
@@ -27,10 +28,11 @@ export async function POST() {
             const data = await api.json();
             console.log(data);
             arr.push(data);
+            credits += data.credits;
         } catch (error) {
             console.log(error);
         }
     }
     console.log(arr);
-    return Response.json({arr})
+    return Response.json({arr,credits})
 }
