@@ -1,5 +1,3 @@
-
-
-export async function POST(){
-    return Response.json({message:"wakeup call successfull"})
+export async function GET() {
+    return new Response(null, { status: 204 })
 }
