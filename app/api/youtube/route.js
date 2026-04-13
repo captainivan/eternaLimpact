@@ -3,7 +3,7 @@ import { runWorkFlow } from "./workFlow";
 
 export async function POST() {
     try {
-        runWorkFlow("imagePromptGeneration");
+        runWorkFlow("basicVideoDataGeneration");
 
         return Response.json({
             message:"success",
