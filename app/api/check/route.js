@@ -13,7 +13,10 @@ export async function POST() {
         process.env.PICSART_API_KEY_8,
         process.env.PICSART_API_KEY_9,
         process.env.PICSART_API_KEY_10,
-        process.env.PICSART_API_KEY_11
+        process.env.PICSART_API_KEY_11,
+        process.env.PICSART_API_KEY_12,
+        process.env.PICSART_API_KEY_13,
+        process.env.PICSART_API_KEY_14,
     ]
     let credits = 0;
     for (let i = 0; i < KEYS.length; i++) {
